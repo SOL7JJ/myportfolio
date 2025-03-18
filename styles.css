@@ -1,0 +1,257 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .menu li {
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: #ffa500;
+}
+
+.navbar .menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .menu-btn i {
+    font-size: 28px;
+    color: #fff;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(to bottom right, #FFB6C1, #FFA500);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#home .home-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#home .home-content .typing {
+    font-weight: bold;
+    font-size: 48px;
+    border-right: 4px solid #fff;
+    padding-right: 5px;
+    display: inline-block;
+    animation: typing 3s steps(20) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20em;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#skills ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#skills ul li {
+    font-size: 18px;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: #ffa500;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #ffa500;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #ffa500;
+}
+
+/* Mobile Menu Styles */
+.navbar .menu.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .menu.active li {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.navbar .menu.active li a {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .menu.active {
+        display: block;
+    }
+
+    .navbar .menu li {
+        margin: 15px 0;
+    }
+
+    #home .home-content h1 {
+        font-size: 36px;
+    }
+}
